@@ -1,0 +1,95 @@
+.inspection-section{
+
+    margin-top:90px;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin:40px 0;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}
+
+.form-group input,
+.form-group select,
+textarea{
+
+    padding:16px;
+
+    border:2px solid #eee;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+textarea:focus{
+
+    border-color:#D4AF37;
+
+}
+
+.book-btn{
+
+    margin-top:25px;
+
+    padding:18px 40px;
+
+    background:#D4AF37;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.book-btn:hover{
+
+    background:#111;
+
+}

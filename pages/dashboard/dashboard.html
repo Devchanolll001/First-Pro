@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | HOM-ANOLL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-shell">
+        <aside class="user-sidebar">
+            <a class="dashboard-brand" href="../../Hom-Anolll/index.html">
+                <img src="../../assets/assets/logo.png" alt="HOM-ANOLL Logo">
+                <span>HOM-ANOLL</span>
+            </a>
+
+            <nav class="user-nav" aria-label="User navigation">
+                <a class="active" href="dashboard.html"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+                <a href="../properties/listings.html"><i class="fas fa-magnifying-glass-location"></i><span>Find Property</span></a>
+                <a href="wishlist.html"><i class="fas fa-heart"></i><span>Wishlist</span></a>
+                <a href="../bookings/my-bookings.html"><i class="fas fa-calendar-check"></i><span>Bookings</span></a>
+                <a href="../contact.html"><i class="fas fa-headset"></i><span>Contact Us</span></a>
+                <a href="notifications.html"><i class="fas fa-bell"></i><span>Notifications</span></a>
+                <a href="profile.html"><i class="fas fa-user"></i><span>My Profile</span></a>
+                <a href="settings.html"><i class="fas fa-gear"></i><span>Settings</span></a>
+            </nav>
+
+            <div class="support-card">
+                <i class="fas fa-headset"></i>
+                <h3>Need help?</h3>
+                <p>Talk to our support team about inspections, payments, or listings.</p>
+                <a href="../contact.html">Contact Us</a>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-topbar">
+                <div>
+                    <p class="eyebrow">User Dashboard</p>
+                    <h1>Good afternoon, <span id="userName">Francis</span></h1>
+                    <p>Track saved homes, bookings, and property updates in one clean workspace.</p>
+                </div>
+                <div class="topbar-actions">
+                    <a class="icon-btn" href="notifications.html" aria-label="Notifications"><i class="fas fa-bell"></i></a>
+                    <a class="profile-chip" href="profile.html"><i class="fas fa-user-circle"></i><span>My Profile</span></a>
+                </div>
+            </header>
+
+            <section class="dashboard-hero">
+                <div class="hero-copy">
+                    <span>Featured property tour</span>
+                    <h2>Luxury Living Starts Here</h2>
+                    <p>Explore selected properties with real photos and video tours from your asset library.</p>
+                    <div class="hero-actions">
+                        <a class="gold-btn" href="../properties/listings.html">Find Property</a>
+                        <a class="outline-btn" href="../bookings/book-inspection.html">Book Inspection</a>
+                    </div>
+                </div>
+                <video class="hero-video" autoplay muted loop playsinline poster="../../assets/properties/villa-001/cover2.jpg">
+                    <source src="../../assets/video/video.mp4.mp4" type="video/mp4">
+                </video>
+            </section>
+
+            <section class="stats-grid">
+                <article class="stat-card"><i class="fas fa-heart"></i><div><h2>12</h2><p>Wishlist</p><small>3 added this week</small></div></article>
+                <article class="stat-card"><i class="fas fa-eye"></i><div><h2>34</h2><p>Viewed</p><small>5 today</small></div></article>
+                <article class="stat-card"><i class="fas fa-calendar-check"></i><div><h2>3</h2><p>Bookings</p><small>Next: Tomorrow</small></div></article>
+                <article class="stat-card"><i class="fas fa-bell"></i><div><h2>5</h2><p>Notifications</p><small>2 unread</small></div></article>
+            </section>
+
+            <section class="quick-actions">
+                <div class="section-header">
+                    <div><h2>Quick Actions</h2><p>Move around your account faster.</p></div>
+                </div>
+                <div class="action-grid">
+                    <a class="action-card" href="../properties/listings.html"><i class="fas fa-search"></i><h3>Find Property</h3><p>Browse premium homes, land, and apartments.</p></a>
+                    <a class="action-card" href="wishlist.html"><i class="fas fa-heart"></i><h3>Wishlist</h3><p>Review your saved properties.</p></a>
+                    <a class="action-card" href="../bookings/my-bookings.html"><i class="fas fa-calendar"></i><h3>Bookings</h3><p>Manage inspections and visits.</p></a>
+                    <a class="action-card" href="notifications.html"><i class="fas fa-bell"></i><h3>Notifications</h3><p>Read property and booking updates.</p></a>
+                </div>
+            </section>
+
+            <section class="recommended-properties">
+                <div class="section-header">
+                    <div><h2>Recommended For You</h2><p>Real images and videos linked from your project assets.</p></div>
+                    <a href="../properties/listings.html">View all</a>
+                </div>
+                <div class="property-grid">
+                    <article class="property-card">
+                        <img src="../../assets/properties/villa-001/cover2.jpg" alt="Luxury Villa">
+                        <div class="property-info"><span class="badge">Featured</span><h3>Luxury Villa</h3><p>Maitama, Abuja</p><h4>NGN 350,000,000</h4><a class="gold-btn" href="../property-details.html?id=1">View Property</a></div>
+                    </article>
+                    <article class="property-card">
+                        <img src="../../assets/properties/onebed-002/cover.jpeg" alt="Modern Apartment">
+                        <div class="property-info"><span class="badge">For Rent</span><h3>Modern Apartment</h3><p>Ikoyi, Lagos</p><h4>NGN 85,000,000</h4><a class="gold-btn" href="../property-details.html?id=2">View Property</a></div>
+                    </article>
+                    <article class="property-card video-card">
+                        <video controls poster="../../assets/hero-image/housesduplex-for-sale-in-gra-port-harcourt-i7jM5iARDTnUag1zT4Qj.jpeg">
+                            <source src="../../assets/video/2 bedroom.mp4" type="video/mp4">
+                        </video>
+                        <div class="property-info"><span class="badge">Video Tour</span><h3>2 Bedroom Tour</h3><p>Port Harcourt, Rivers</p><h4>Available Now</h4><a class="gold-btn" href="../bookings/book-inspection.html">Book Inspection</a></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="dashboard-row">
+                <article class="panel">
+                    <div class="section-header"><div><h2>Upcoming Inspection</h2><p>Your next scheduled visit.</p></div></div>
+                    <div class="inspection-card"><span class="badge confirmed">Confirmed</span><h3>Luxury Villa</h3><p><i class="fas fa-location-dot"></i> Maitama, Abuja</p><p><i class="fas fa-clock"></i> Tomorrow, 2:00 PM</p><a class="gold-btn" href="../bookings/my-bookings.html">View Booking</a></div>
+                </article>
+                <article class="panel">
+                    <div class="section-header"><div><h2>Recent Notifications</h2><p>Latest account updates.</p></div></div>
+                    <div class="notification-list">
+                        <div><i class="fas fa-circle-check success"></i><span>Inspection confirmed for Luxury Villa.</span></div>
+                        <div><i class="fas fa-arrow-trend-down warning"></i><span>A saved property price dropped.</span></div>
+                        <div><i class="fas fa-house primary"></i><span>New apartment added in Ikoyi.</span></div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="../../js/customer/dashboard.js"></script>
+    <footer class="copyright-footer">
+        <p>&copy; 2026 HOM-ANOLL. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

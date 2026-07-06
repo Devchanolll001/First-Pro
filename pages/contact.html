@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | HOM-ANOLL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <main id="main-content" style="display:block">
+        <header class="navbar">
+            <div class="logo-area">
+                <img src="../assets/assets/logo.png" alt="HOM-ANOLL Logo">
+                <span>HOM-ANOLL</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../Hom-Anolll/index.html">Home</a></li>
+                    <li><a href="properties/listings.html">Properties</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="auth/login.html" class="login-btn">Login</a>
+        </header>
+
+        <section class="page-header">
+            <h1>Contact Us</h1>
+            <p>Have a property question, inspection request, or listing inquiry? Send a message and our team will respond.</p>
+        </section>
+
+        <section class="content-section">
+            <div class="content-grid">
+                <article class="content-card"><i class="fas fa-phone"></i><h3>Call</h3><p>Speak with our property support team.</p></article>
+                <article class="content-card"><i class="fas fa-envelope"></i><h3>Email</h3><p>Send inquiries about homes, land, rentals, and investments.</p></article>
+                <article class="content-card"><i class="fas fa-calendar-check"></i><h3>Inspection</h3><p>Book a visit for any listed property that interests you.</p></article>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-title">
+                <h2>Send a Message</h2>
+                <p>Tell us what you need and we will guide you from there.</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <input id="contactName" type="text" placeholder="Full name" required>
+                <input id="contactEmail" type="email" placeholder="Email address" required>
+                <input id="contactPhone" type="tel" placeholder="Phone number">
+                <textarea id="contactMessage" placeholder="Your message" required></textarea>
+                <button class="btn-primary" type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <footer class="site-footer">
+            <div class="site-footer__inner">
+                <div><strong>HOM-ANOLL</strong><p>Professional home location services for buyers, renters, and investors.</p></div>
+                <div class="site-footer__links">
+                    <a href="properties/listings.html">Properties</a>
+                    <a href="about.html">About</a>
+                    <a href="auth/login.html">Login</a>
+                    <a href="auth/register.html">Create Account</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <footer class="copyright-footer">
+        <p>&copy; 2026 HOM-ANOLL. All Rights Reserved.</p>
+    </footer>
+    <div id="toast" class="toast"></div>
+    <script src="../js/shared/utils.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

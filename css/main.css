@@ -1,0 +1,135 @@
+@import url("style.css");
+@import url("splash.css");
+@import url("navbar.css");
+@import url("hero.css");
+@import url("search.css");
+@import url("cards.css");
+@import url("sections.css");
+@import url("footer.css");
+@import url("toast.css");
+@import url("responsive.css");
+@import url("contact.css");
+body {
+    background: #f6f3ec;
+}
+
+#main-content {
+    padding: 0;
+    text-align: initial;
+}
+
+section {
+    position: relative;
+}
+
+.search {
+    padding: 82px 8% 36px;
+    background: #ffffff;
+}
+
+.search-container {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-container h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #111111;
+    margin-bottom: 14px;
+}
+
+.search-container p {
+    color: #666666;
+    font-size: 17px;
+}
+
+.featured,
+.categories,
+.investment {
+    padding: 96px 8%;
+}
+
+.featured {
+    background: #ffffff;
+}
+
+.categories {
+    background: #f6f3ec;
+}
+
+.investment {
+    background: #111111;
+    color: #ffffff;
+}
+
+.investment .section-title h2,
+.investment .section-title p {
+    color: inherit;
+}
+
+.investment .section-title p {
+    color: rgba(255, 255, 255, .72);
+}
+
+.investment-card {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .22);
+}
+
+.investment-card p {
+    color: rgba(255, 255, 255, .76);
+}
+
+.site-footer {
+    background: #111111;
+    color: #ffffff;
+    padding: 56px 8%;
+}
+
+.site-footer__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-footer strong {
+    color: #D4AF37;
+    letter-spacing: 1px;
+}
+
+.site-footer p {
+    margin-top: 8px;
+    color: rgba(255, 255, 255, .72);
+}
+
+.site-footer__links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.site-footer__links a {
+    color: rgba(255, 255, 255, .82);
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+.site-footer__links a:hover {
+    color: #D4AF37;
+}
+
+.copyright-footer{
+    background:#0f0f0f;
+    color:rgba(255,255,255,.72);
+    text-align:center;
+    padding:18px 8%;
+    font-size:14px;
+}
+
+.copyright-footer p{
+    margin:0;
+}

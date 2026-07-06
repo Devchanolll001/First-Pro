@@ -1,0 +1,569 @@
+.admin-layout {
+    min-height: 100vh;
+    display: flex;
+    background: var(--off-white);
+}
+
+.sidebar {
+    width: 270px;
+    min-height: 100vh;
+    padding: 28px 22px;
+    background: var(--primary-black);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary-gold);
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sidebar-logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background: var(--primary-gold);
+    color: var(--primary-black);
+}
+
+.sidebar-logout {
+    margin-top: auto;
+    color: var(--white);
+    text-decoration: none;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    background: var(--secondary-black);
+    transition: var(--transition);
+}
+
+.sidebar-logout:hover {
+    background: var(--primary-gold);
+    color: var(--primary-black);
+}
+
+.admin-main {
+    flex: 1;
+    padding: 36px;
+}
+
+body{
+
+    font-family:Inter,sans-serif;
+
+    background:#f5f5f5;
+
+}
+
+.admin-container{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+.admin-sidebar{
+
+    width:280px;
+
+    background:#111;
+
+    color:white;
+
+    padding:35px;
+
+}
+
+.admin-sidebar h2{
+
+    color:#D4AF37;
+
+    margin-bottom:40px;
+
+}
+
+.admin-sidebar ul{
+
+    list-style:none;
+
+}
+
+.admin-sidebar li{
+
+    padding:18px;
+
+    border-radius:14px;
+
+    margin-bottom:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.admin-sidebar li:hover{
+
+    background:#D4AF37;
+
+    color:#111;
+
+}
+
+.admin-main{
+
+    flex:1;
+
+    padding:40px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+th{
+
+    background:#111;
+
+    color:white;
+
+}
+
+th,
+td{
+
+    padding:18px;
+
+    text-align:left;
+
+}
+
+tr:nth-child(even){
+
+    background:#fafafa;
+
+}
+
+.approved{
+
+    color:#22c55e;
+
+    font-weight:bold;
+
+}
+
+.pending{
+
+    color:#f59e0b;
+
+    font-weight:bold;
+
+}
+
+.form-group{
+
+    margin-bottom:25px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+
+    outline:none;
+
+    border-color:#D4AF37;
+
+    box-shadow:0 0 0 3px rgba(212,175,55,.2);
+
+}
+
+.two-columns{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.four-columns{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.amenities-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:15px;
+
+    margin:25px 0;
+
+}
+
+.gold-btn{
+
+    width:100%;
+
+    margin-top:40px;
+
+    padding:18px;
+
+    background:#D4AF37;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.gold-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(212,175,55,.35);
+
+}
+
+.action-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.edit-btn{
+
+    background:#D4AF37;
+
+    color:#111;
+
+}
+
+.delete-btn{
+
+    background:#dc2626;
+
+    color:white;
+
+}
+
+.preview-btn{
+
+    background:#111;
+
+    color:white;
+
+}
+
+.action-buttons button{
+
+    border:none;
+
+    padding:10px 14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.action-buttons button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*=========================================
+            MEDIA UPLOAD
+==========================================*/
+
+.drop-zone{
+
+    border:3px dashed #D4AF37;
+
+    border-radius:20px;
+
+    background:white;
+
+    padding:60px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.drop-zone:hover{
+
+    background:#fffdf6;
+
+}
+
+.drop-zone i{
+
+    font-size:70px;
+
+    color:#D4AF37;
+
+    margin-bottom:25px;
+
+}
+
+.upload-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:#111;
+
+    color:white;
+
+    padding:15px 28px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+.upload-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:#111;
+
+    color:white;
+
+    padding:15px 28px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+.image-preview-grid{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fill,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.preview-card img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+}
+
+.preview-actions{
+
+    display:flex;
+
+}
+
+.preview-actions button{
+
+    flex:1;
+
+    border:none;
+
+    padding:14px;
+
+    cursor:pointer;
+
+}
+
+.cover-btn{
+
+    background:#D4AF37;
+
+}
+
+.delete-image{
+
+    background:#dc2626;
+
+    color:white;
+
+}
+
+#videoPreview{
+
+    width:100%;
+
+    margin-top:25px;
+
+    border-radius:20px;
+
+    display:none;
+
+}
+
+.pending{
+
+background:#FEF3C7;
+
+color:#B45309;
+
+padding:8px 14px;
+
+border-radius:20px;
+
+font-weight:600;
+
+}
+
+.approved{
+
+background:#DCFCE7;
+
+color:#166534;
+
+padding:8px 14px;
+
+border-radius:20px;
+
+font-weight:600;
+
+}
+
+.completed{
+
+background:#DBEAFE;
+
+color:#1D4ED8;
+
+padding:8px 14px;
+
+border-radius:20px;
+
+font-weight:600;
+
+}
+
+.cancelled{
+
+background:#FEE2E2;
+
+color:#B91C1C;
+
+padding:8px 14px;
+
+border-radius:20px;
+
+font-weight:600;
+
+}
+
+
+.copyright-footer{
+    background:#0f0f0f;
+    color:rgba(255,255,255,.72);
+    text-align:center;
+    padding:18px 8%;
+    font-size:14px;
+}
+
+.copyright-footer p{
+    margin:0;
+}

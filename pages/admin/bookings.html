@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | HOM-ANOLL Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="../../assets/assets/logo.png" alt="HOM-ANOLL Logo">
+                <span>HOM-ANOLL</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="properties.html">Properties</a>
+                <a href="bookings.html" class="active">Bookings</a>
+                <a href="users.html">Users</a>
+                <a href="reports.html">Analytics</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+
+            <a href="../auth/login.html" class="sidebar-logout">Logout</a>
+        </aside>
+
+        <main class="admin-main">
+            <header class="page-header">
+                <h1>Inspection Bookings</h1>
+                <p>Review inspection requests and update their status.</p>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h2 id="pendingCount">0</h2>
+                    <p>Pending</p>
+                </div>
+                <div class="stat-card">
+                    <h2 id="approvedCount">0</h2>
+                    <p>Approved</p>
+                </div>
+                <div class="stat-card">
+                    <h2 id="completedCount">0</h2>
+                    <p>Completed</p>
+                </div>
+                <div class="stat-card">
+                    <h2 id="cancelledCount">0</h2>
+                    <p>Cancelled</p>
+                </div>
+            </section>
+
+            <table id="bookingTable">
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Email</th>
+                        <th>Property</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </main>
+    </div>
+
+    <script>
+        const defaultBookings = [
+            {
+                customer: 'John Doe',
+                email: 'john@example.com',
+                property: 'Luxury Villa',
+                date: '2026-07-12',
+                time: '10:00',
+                status: 'Pending'
+            },
+            {
+                customer: 'Mary James',
+                email: 'mary@example.com',
+                property: 'Modern Apartment',
+                date: '2026-07-15',
+                time: '14:00',
+                status: 'Approved'
+            }
+        ];
+
+        function getBookings() {
+            const stored = JSON.parse(localStorage.getItem('bookings') || '[]');
+            return stored.length ? stored : defaultBookings;
+        }
+
+        function saveBookings(bookings) {
+            localStorage.setItem('bookings', JSON.stringify(bookings));
+        }
+
+        function updateBookingStatus(index, status) {
+            const bookings = getBookings();
+            bookings[index].status = status;
+            saveBookings(bookings);
+            renderBookings();
+        }
+
+        function updateStats(bookings) {
+            const count = (status) => bookings.filter((booking) => booking.status === status).length;
+            document.getElementById('pendingCount').textContent = count('Pending');
+            document.getElementById('approvedCount').textContent = count('Approved');
+            document.getElementById('completedCount').textContent = count('Completed');
+            document.getElementById('cancelledCount').textContent = count('Cancelled');
+        }
+
+        function renderBookings() {
+            const bookings = getBookings();
+            const tableBody = document.querySelector('#bookingTable tbody');
+            tableBody.innerHTML = '';
+
+            bookings.forEach((booking, index) => {
+                const statusClass = booking.status.toLowerCase();
+                tableBody.innerHTML += `
+                    <tr>
+                        <td>${booking.customer || booking.name || 'Customer'}</td>
+                        <td>${booking.email || ''}</td>
+                        <td>${booking.property || 'Property'}</td>
+                        <td>${booking.date || booking.inspectionDate || ''}</td>
+                        <td>${booking.time || booking.inspectionTime || ''}</td>
+                        <td><span class="${statusClass}">${booking.status}</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="edit-btn" type="button" onclick="updateBookingStatus(${index}, 'Approved')">Approve</button>
+                                <button class="preview-btn" type="button" onclick="updateBookingStatus(${index}, 'Completed')">Complete</button>
+                                <button class="delete-btn" type="button" onclick="updateBookingStatus(${index}, 'Cancelled')">Cancel</button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            updateStats(bookings);
+        }
+
+        renderBookings();
+    </script>
+    <footer class="copyright-footer">
+        <p>&copy; 2026 HOM-ANOLL. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

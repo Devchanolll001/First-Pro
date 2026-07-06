@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | HOM-ANOLL Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="../../assets/assets/logo.png" alt="HOM-ANOLL Logo">
+                <span>HOM-ANOLL</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="properties.html">Properties</a>
+                <a href="bookings.html">Bookings</a>
+                <a href="users.html">Users</a>
+                <a href="reports.html">Analytics</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+
+            <a href="../auth/login.html" class="sidebar-logout">Logout</a>
+        </aside>
+
+        <main class="admin-main">
+            <header class="page-header">
+                <h1>Welcome Back Admin</h1>
+                <p>Manage properties, bookings, users, and platform activity.</p>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h2 class="counter" data-target="154">0</h2>
+                    <p>Properties</p>
+                </div>
+                <div class="stat-card">
+                    <h2 class="counter" data-target="326">0</h2>
+                    <p>Registered Users</p>
+                </div>
+                <div class="stat-card">
+                    <h2 class="counter" data-target="41">0</h2>
+                    <p>Bookings</p>
+                </div>
+                <div class="stat-card">
+                    <h2 class="counter" data-target="720">0</h2>
+                    <p>Monthly Leads</p>
+                </div>
+            </section>
+
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-grid">
+                    <button id="addProperty" type="button"><i class="fas fa-plus"></i> Add Property</button>
+                    <button type="button"><i class="fas fa-image"></i> Upload Images</button>
+                    <button type="button"><i class="fas fa-video"></i> Upload Video</button>
+                    <button type="button"><i class="fas fa-file-export"></i> Export Report</button>
+                </div>
+            </section>
+
+            <section class="recent-bookings">
+                <h2>Recent Bookings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Property</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Luxury Villa</td>
+                            <td>12 July</td>
+                            <td><span class="approved">Approved</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mary James</td>
+                            <td>Beach House</td>
+                            <td>15 July</td>
+                            <td><span class="pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.counter').forEach((counter) => {
+            const target = Number(counter.dataset.target || 0);
+            const step = Math.max(1, Math.ceil(target / 40));
+            let count = 0;
+            const timer = setInterval(() => {
+                count += step;
+                if (count >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    counter.textContent = count;
+                }
+            }, 35);
+        });
+
+        document.getElementById('addProperty')?.addEventListener('click', () => {
+            window.location.href = 'add-property.html';
+        });
+    </script>
+    <footer class="copyright-footer">
+        <p>&copy; 2026 HOM-ANOLL. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

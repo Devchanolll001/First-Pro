@@ -1,0 +1,188 @@
+/* ==========================================
+   HOM-ANOLL NAVBAR
+========================================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:92%;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 45px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:22px;
+
+    z-index:1000;
+
+    box-shadow:
+    0 16px 45px rgba(17,17,17,.12);
+
+    transition:.4s;
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo-area img{
+
+    width:55px;
+
+}
+
+.logo-area span{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#111;
+
+    letter-spacing:1.5px;
+
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.nav-links li{
+
+    position:relative;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#1f1f1f;
+
+    font-weight:500;
+
+    font-size:17px;
+
+    transition:.35s;
+
+}
+
+/* Gold Hover */
+
+.nav-links a:hover{
+
+    color:#D4AF37;
+
+}
+
+/* Animated Underline */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:linear-gradient(135deg,#111 0%,#2a2414 45%,#D4AF37 100%);
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.login-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#D4AF37;
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+/* Hover */
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 15px 30px rgba(212,175,55,.35);
+
+}
+
+nav a.active{
+
+color:var(--gold);
+
+font-weight:700;
+
+}
+

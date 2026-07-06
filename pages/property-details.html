@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Property Details | HOM-ANOLL</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/details.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="property-details">
+
+    <!-- Media Gallery -->
+
+    <section class="media-gallery">
+
+        <div id="mainMedia">
+
+        </div>
+
+        <div id="thumbnailGallery" class="thumbnail-gallery">
+
+        </div>
+
+    </section>
+
+    <section class="property-information">
+
+        <div id="propertyContent"></div>
+
+    </section>
+
+    <!-- Property Information -->
+
+    <section id="propertyInfo">
+
+    </section>
+
+
+    <section class="inspection-section" id="book-inspection">
+
+        <div class="inspection-card">
+
+            <div class="inspection-copy">
+                <span class="section-kicker">Private Tour</span>
+                <h2>Book a Property Inspection</h2>
+                <p>Choose a convenient time and our team will prepare a guided walkthrough, property answers, and next-step support.</p>
+
+                <div class="inspection-highlights">
+                    <div><i class="fas fa-calendar-check"></i><span>Flexible visit schedule</span></div>
+                    <div><i class="fas fa-user-tie"></i><span>Dedicated property advisor</span></div>
+                    <div><i class="fas fa-shield-halved"></i><span>Verified inspection details</span></div>
+                </div>
+            </div>
+
+            <form id="inspectionForm" class="inspection-form">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+234..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitDate">Preferred Date</label>
+                        <input type="date" id="visitDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitTime">Preferred Time</label>
+                        <input type="time" id="visitTime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitors">Visitors</label>
+                        <select id="visitors">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4+</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group full-field">
+                    <label for="message">Additional Notes</label>
+                    <textarea id="message" rows="5" placeholder="Tell us anything we should know..."></textarea>
+                </div>
+
+                <button type="submit" class="book-btn">
+                    <i class="fas fa-calendar-plus"></i>
+                    Book Inspection
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <section class="property-help-sections">
+        <article class="property-help-card">
+            <i class="fas fa-magnifying-glass-location"></i>
+            <div>
+                <span>Find Property</span>
+                <h3>Keep browsing without returning to the splash screen.</h3>
+                <p>Open the full property listings page and continue searching homes, apartments, land, and investments.</p>
+                <a href="properties/listings.html">Find Property</a>
+            </div>
+        </article>
+
+        <article class="property-help-card">
+            <i class="fas fa-headset"></i>
+            <div>
+                <span>Contact</span>
+                <h3>Need help before booking?</h3>
+                <p>Send a message directly to HOM-ANOLL support for inspection, pricing, or listing questions.</p>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </article>
+    </section>
+
+</div>
+
+<!-- ==========================
+     MEDIA LIGHTBOX
+========================== -->
+
+<div id="lightbox" class="lightbox">
+
+    <button class="close-lightbox" id="closeLightbox">
+        ✕
+    </button>
+
+    <button class="nav-btn prev-btn" id="prevMedia">
+        ❮
+    </button>
+
+    <div class="lightbox-content" id="lightboxContent">
+
+    </div>
+
+    <button class="nav-btn next-btn" id="nextMedia">
+        ❯
+    </button>
+
+</div>
+<script src="../js/shared/utils.js"></script>
+<script src="../js/variables.JS"></script>
+<script src="../js/data.js"></script>
+<script src="../js/property-details.js"></script>
+
+    <footer class="copyright-footer">
+        <p>&copy; 2026 HOM-ANOLL. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

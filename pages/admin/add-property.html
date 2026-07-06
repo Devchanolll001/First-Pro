@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Add Property | HOM-ANOLL</title>
+
+<link rel="stylesheet"
+href="../../css/admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <main class="admin-main">
+
+<div class="page-header">
+
+<h1>Add New Property</h1>
+
+<a href="admin-dashboard.html"
+class="back-btn">
+
+<i class="fas fa-arrow-left"></i>
+
+Dashboard
+
+</a>
+
+</div>
+
+<form id="propertyForm">
+
+    <div class="form-group">
+
+<label>
+
+Property Title
+
+</label>
+
+<input
+type="text"
+id="title"
+required>
+
+</div>
+
+<div class="two-columns">
+
+<div class="form-group">
+
+<label>
+
+Property Type
+
+</label>
+
+<select id="propertyType">
+
+<option>Apartment</option>
+
+<option>Villa</option>
+
+<option>Duplex</option>
+
+<option>Land</option>
+
+<option>Commercial</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Listing Type
+
+</label>
+
+<select id="listingType">
+
+<option>For Sale</option>
+
+<option>For Rent</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="two-columns">
+
+<div class="form-group">
+
+<label>
+
+Price (₦)
+
+</label>
+
+<input
+type="number"
+id="price">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Location
+
+</label>
+
+<input
+type="text"
+id="location">
+
+</div>
+
+</div>
+
+<div class="four-columns">
+
+<div class="form-group">
+
+<label>Bedrooms</label>
+
+<input type="number" id="bedrooms">
+
+</div>
+
+<div class="form-group">
+
+<label>Bathrooms</label>
+
+<input type="number" id="bathrooms">
+
+</div>
+
+<div class="form-group">
+
+<label>Parking</label>
+
+<input type="number" id="parking">
+
+</div>
+
+<div class="form-group">
+
+<label>Size (sqm)</label>
+
+<input type="number" id="size">
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Description
+
+</label>
+
+<textarea
+id="description"
+rows="8">
+
+</textarea>
+
+</div>
+
+<h3>Amenities</h3>
+
+<div class="amenities-grid">
+
+<label>
+
+<input type="checkbox">
+
+ Swimming Pool
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+ Gym
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+ CCTV
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+ Garden
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+ Smart Home
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+ Security
+
+</label>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Property Video
+
+</label>
+
+<input
+
+type="file"
+
+accept="video/*">
+
+</div>
+
+<div class="two-columns">
+
+<div class="form-group">
+
+<label>
+
+Latitude
+
+</label>
+
+<input type="text">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Longitude
+
+</label>
+
+<input type="text">
+
+</div>
+
+</div>
+
+<div class="toggle">
+
+<label>
+
+Featured Property
+
+</label>
+
+<input
+type="checkbox"
+id="featured">
+
+</div>
+
+<button
+class="gold-btn"
+type="submit">
+
+<i class="fas fa-floppy-disk"></i>
+
+Save Property
+
+</button>
+
+</form>
+
+</main>
+
+</div>
+
+<!-- ================= PROPERTY MEDIA ================= -->
+
+<section class="media-upload">
+
+    <h2>Property Media</h2>
+
+    <p>Upload high-quality images and a property video.</p>
+
+    <div id="dropZone" class="drop-zone">
+
+        <i class="fas fa-cloud-upload-alt"></i>
+
+        <h3>Drag & Drop Images Here</h3>
+
+        <p>or</p>
+
+        <label for="images" class="upload-btn">
+
+            Browse Images
+
+        </label>
+
+        <input
+            type="file"
+            id="images"
+            multiple
+            accept="image/*"
+            hidden>
+
+    </div>
+
+    <div id="imagePreview"
+        class="image-preview-grid">
+
+    </div>
+
+</section>
+
+<section class="video-upload">
+
+    <h2>Property Video</h2>
+
+    <input
+        type="file"
+        id="propertyVideo"
+        accept="video/*">
+
+    <video
+        id="videoPreview"
+        controls>
+
+    </video>
+
+</section>
+
+
+<script src="../../js/admin.js"></script>
+
+    <footer class="copyright-footer">
+        <p>&copy; 2026 HOM-ANOLL. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

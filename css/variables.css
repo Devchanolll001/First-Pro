@@ -1,0 +1,188 @@
+:root{
+
+--gold:#D4AF37;
+
+--black:#111111;
+
+--white:#ffffff;
+
+--light:#f8f8f8;
+
+--gray:#666;
+
+--success:#16a34a;
+
+--danger:#dc2626;
+
+--shadow:0 25px 60px rgba(0,0,0,.15);
+
+--radius:20px;
+
+--transition:.35s ease;
+
+--heading:"Poppins",sans-serif;
+
+--body:"Inter",sans-serif;
+
+}
+
+:root{
+
+    /* Brand Colors */
+
+    --gold:#D4AF37;
+
+    --gold-light:#E6C766;
+
+    --gold-dark:#B89024;
+
+    --black:#111111;
+
+    --dark:#1A1A1A;
+
+    --white:#FFFFFF;
+
+    --light:#F8F8F8;
+
+    --gray:#777777;
+
+    --border:#E5E5E5;
+
+    /* Status */
+
+    --success:#22C55E;
+
+    --warning:#F59E0B;
+
+    --danger:#EF4444;
+
+    --info:#3B82F6;
+
+    /* Radius */
+
+    --radius-sm:8px;
+
+    --radius-md:12px;
+
+    --radius-lg:20px;
+
+    --radius-xl:30px;
+
+    /* Shadows */
+
+    --shadow-sm:0 5px 15px rgba(0,0,0,.08);
+
+    --shadow-md:0 10px 25px rgba(0,0,0,.12);
+
+    --shadow-lg:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+background:var(--gold);
+
+color:var(--white);
+
+border-radius:var(--radius-md);
+
+h1{
+
+font-size:48px;
+
+font-weight:700;
+
+}
+
+h2{
+
+font-size:36px;
+
+}
+
+h3{
+
+font-size:26px;
+
+}
+
+p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.gold-btn{
+
+background:var(--gold);
+
+color:white;
+
+padding:14px 28px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.gold-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:var(--shadow-md);
+
+}
+
+.card{
+
+background:white;
+
+border-radius:20px;
+
+box-shadow:var(--shadow-sm);
+
+padding:25px;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+.input-group{
+
+display:flex;
+
+flex-direction:column;
+
+gap:8px;
+
+margin-bottom:20px;
+
+}
+
+.input-group input,
+
+.input-group select,
+
+.input-group textarea{
+
+padding:15px;
+
+border:1px solid var(--border);
+
+border-radius:10px;
+
+}
+

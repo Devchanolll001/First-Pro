@@ -1,0 +1,273 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:760px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.hero-bg,
+.hero-bg.hero-bg--fade{
+
+    position:absolute;
+
+    inset:0;
+
+    background-position:center;
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    transition:opacity 1s ease;
+
+}
+
+.hero-bg{
+
+    z-index:0;
+
+    opacity:1;
+
+}
+
+.hero-bg.hero-bg--fade{
+
+    z-index:1;
+
+    opacity:0;
+
+}
+
+/* Dark Overlay */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.45),rgba(0,0,0,.58));
+
+    backdrop-filter:blur(2px);
+
+    z-index:2;
+}
+
+/* Hero Content */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    text-align:center;
+
+    color:white;
+
+    width:90%;
+
+    max-width:980px;
+
+}
+
+/* Main Heading */
+
+.hero-content h1{
+
+    font-size:clamp(44px,7vw,78px);
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    animation:fadeDown 1s ease;
+}
+
+/* Subtitle */
+
+.hero-content p{
+
+    font-size:clamp(16px,2.2vw,22px);
+
+    color:#f5f5f5;
+
+    letter-spacing:2px;
+
+    margin-bottom:34px;
+
+    animation:fadeUp 1.3s ease;
+}
+
+/* ==========================================
+   SEARCH BOX
+========================================== */
+
+.search-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:white;
+
+    border-radius:60px;
+
+    overflow:hidden;
+
+    max-width:700px;
+
+    margin:auto;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:22px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:18px;
+
+}
+
+.search-box select{
+
+    min-width:160px;
+
+    padding:22px 16px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:18px;
+
+    background:#f9f9f9;
+
+    color:#333;
+
+}
+
+.search-box button{
+
+    background:#D4AF37;
+
+    color:white;
+
+    border:none;
+
+    padding:22px 45px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.search-box button:hover{
+
+    background:#b99017;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+   BACKGROUND SLIDESHOW
+========================================== */
+
+@keyframes heroSlider{
+
+    0%,20%{
+
+        background-image:url("../assets/hero-image/browse-houses-hero.webp");
+
+    }
+
+    25%,45%{
+
+        background-image:url("../assets/hero-image/photo-1600585154340-be6161a56a0c.jpg");
+
+    }
+
+    50%,70%{
+
+        background-image:url("../assets/hero-image/premium-housing-development-usa-expensive-260nw-2599826849.webp");
+
+    }
+
+    75%,95%{
+
+        background-image:url("../assets/hero-image/069e5f20b7d4d3-5-bedroom-detached-duplex-with-pool-detached-duplexes-for-sale-lekki-lagos.jpg");
+
+    }
+
+}

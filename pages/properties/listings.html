@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | HOM-ANOLL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <main id="main-content" style="display:block">
+        <header class="navbar">
+            <div class="logo-area">
+                <img src="../../assets/assets/logo.png" alt="HOM-ANOLL Logo">
+                <span>HOM-ANOLL</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../Hom-Anolll/index.html">Home</a></li>
+                    <li><a href="listings.html" class="active">Properties</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="../auth/login.html" class="login-btn">Login</a>
+        </header>
+
+        <section class="page-header">
+            <h1>Property Listings</h1>
+            <p>Explore available homes, apartments, villas, and land from the HOM-ANOLL property catalog.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-box"><h2 data-target="1">0</h2><p>Years of Experience</p></div>
+            <div class="stat-box"><h2 data-target="5">0</h2><p>Cities Covered</p></div>
+            <div class="stat-box"><h2 data-target="1000">0</h2><p>Happy Clients</p></div>
+            <div class="stat-box"><h2 data-target="1000000">0</h2><p>Properties Listed</p></div>
+        </section>
+
+        <section class="featured">
+            <div class="section-title">
+                <h2>Available Properties</h2>
+                <p>Use the quick filters to narrow down the listings.</p>
+            </div>
+            <div class="listing-toolbar">
+                <input type="text" id="keyword" placeholder="Search property">
+                <select id="state">
+                    <option value="">All States</option>
+                    <option>Lagos</option>
+                    <option>Abuja</option>
+                    <option>Rivers</option>
+                    <option>Kaduna</option>
+                </select>
+                <select id="type">
+                    <option value="">Property Type</option>
+                    <option>Apartment</option>
+                    <option>Duplex</option>
+                    <option>Villa</option>
+                    <option>Bungalow</option>
+                </select>
+                <input type="number" id="minPrice" placeholder="Minimum Price">
+                <input type="number" id="maxPrice" placeholder="Maximum Price">
+                <select id="bedrooms">
+                    <option value="">Bedrooms</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <select id="sort">
+                    <option value="newest">Newest</option>
+                    <option value="priceLow">Lowest Price</option>
+                    <option value="priceHigh">Highest Price</option>
+                    <option value="title">A - Z</option>
+                </select>
+            </div>
+            <div class="property-grid" id="propertyGrid"></div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="site-footer__inner">
+                <div><strong>HOM-ANOLL</strong><p>Professional home location services for buyers, renters, and investors.</p></div>
+                <div class="site-footer__links">
+                    <a href="../about.html">About</a>
+                    <a href="../contact.html">Contact</a>
+                    <a href="../auth/login.html">Login</a>
+                    <a href="../auth/register.html">Create Account</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="../../js/shared/utils.js"></script>
+    <script src="../../js/data.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/compare.js"></script>
+    <script src="../../js/stats.js"></script>
+    <footer class="copyright-footer">
+        <p>&copy; 2026 HOM-ANOLL. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

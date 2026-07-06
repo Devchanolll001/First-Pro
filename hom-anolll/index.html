@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOM-ANOLL | Home Location Services</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="splash-content">
+            <img src="../assets/assets/logo.png" alt="HOM-ANOLL Logo" class="logo">
+            <h1>HOM-ANOLL</h1>
+            <p>HOME LOCATION SERVICES</p>
+            <span id="loading-text">Loading...</span>
+            <div class="loader">
+                <div class="loader-fill"></div>
+            </div>
+            <div id="percentage">0%</div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <header class="navbar">
+            <a class="logo-area" href="index.html" aria-label="HOM-ANOLL home">
+                <img src="../assets/assets/logo.png" alt="HOM-ANOLL Logo">
+                <span>HOM-ANOLL</span>
+            </a>
+
+            <nav aria-label="Primary navigation">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="../pages/properties/listings.html">Properties</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                    <li>
+                        <a href="../pages/dashboard/wishlist.html">
+                            Wishlist
+                            <span id="wishlistCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="../pages/auth/login.html" class="login-btn">Login</a>
+        </header>
+
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-bg hero-bg--fade"></div>
+            <div class="overlay"></div>
+
+            <div class="hero-content">
+                <h1>Find Your Dream Home</h1>
+                <p>Buy | Rent | Sell | Invest</p>
+
+                <section class="advanced-search" aria-label="Property search">
+                    <div class="search-grid">
+                        <input type="text" id="keyword" placeholder="Search property">
+
+                        <select id="state">
+                            <option value="">All States</option>
+                            <option>Lagos</option>
+                            <option>Abuja</option>
+                            <option>Rivers</option>
+                            <option>Kaduna</option>
+                        </select>
+
+                        <select id="type">
+                            <option value="">Property Type</option>
+                            <option>Apartment</option>
+                            <option>Duplex</option>
+                            <option>Villa</option>
+                            <option>Bungalow</option>
+                        </select>
+
+                        <input type="number" id="minPrice" placeholder="Minimum Price" min="0">
+                        <input type="number" id="maxPrice" placeholder="Maximum Price" min="0">
+
+                        <select id="bedrooms">
+                            <option value="">Bedrooms</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+
+                        <select id="sort">
+                            <option value="newest">Newest</option>
+                            <option value="priceLow">Lowest Price</option>
+                            <option value="priceHigh">Highest Price</option>
+                            <option value="title">A - Z</option>
+                        </select>
+
+                        <button id="searchBtn" type="button">Search</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="search">
+            <div class="search-container">
+                <h2>Find Your Perfect Property</h2>
+                <p>Use advanced filters to discover properties that match your budget, location, and lifestyle.</p>
+            </div>
+        </section>
+
+        <section class="investment">
+            <div class="section-title">
+                <h2>Investment Opportunities</h2>
+                <p>Discover carefully selected investment opportunities with long-term growth potential.</p>
+            </div>
+
+            <div class="investment-grid">
+                <article class="investment-card">
+                    <span class="roi">18% ROI</span>
+                    <h3>Luxury Apartments</h3>
+                    <p>Prime apartments in high-demand urban areas.</p>
+                    <a class="btn-primary" href="../pages/properties/listings.html?type=Apartment">Learn More</a>
+                </article>
+
+                <article class="investment-card">
+                    <span class="roi">25% ROI</span>
+                    <h3>Land Banking</h3>
+                    <p>Secure land today in fast-growing locations.</p>
+                    <a class="btn-primary" href="../pages/contact.html">Learn More</a>
+                </article>
+
+                <article class="investment-card">
+                    <span class="roi">20% ROI</span>
+                    <h3>Commercial Spaces</h3>
+                    <p>Modern office and retail developments.</p>
+                    <a class="btn-primary" href="../pages/contact.html">Learn More</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-box">
+                <h2 data-target="1">0</h2>
+                <p>Years of Experience</p>
+            </div>
+            <div class="stat-box">
+                <h2 data-target="5">0</h2>
+                <p>Cities Covered</p>
+            </div>
+            <div class="stat-box">
+                <h2 data-target="1000">0</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-box">
+                <h2 data-target="1000000">0</h2>
+                <p>Properties Listed</p>
+            </div>
+        </section>
+
+        <footer class="site-footer" id="contact">
+            <div class="site-footer__inner">
+                <div>
+                    <strong>HOM-ANOLL</strong>
+                    <p>Professional home location services for buyers, renters, and investors.</p>
+                </div>
+
+                <div class="site-footer__links">
+                    <a href="../pages/properties/listings.html">Properties</a>
+                    <a href="../pages/about.html">About</a>
+                    <a href="../pages/contact.html">Contact</a>
+                    <a href="../pages/auth/login.html">Login</a>
+                    <a href="../pages/auth/register.html">Create Account</a>
+                    <a href="../pages/dashboard/wishlist.html">Wishlist</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <footer class="copyright-footer">
+        <p>&copy; 2026 HOM-ANOLL. All Rights Reserved.</p>
+    </footer>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <div id="toastContainer" aria-live="polite"></div>
+
+    <script src="../js/shared/utils.js"></script>
+    <script src="../js/shared/storage.js"></script>
+    <script src="../js/splash.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/stats.js"></script>
+</body>
+</html>
